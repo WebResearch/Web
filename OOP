@@ -1,0 +1,33 @@
+<?php
+
+class Rectangle{
+  public $width = 0;
+  public $height= 0;
+  
+  function setSize($w = 0, $h = 0)
+  {
+      $this->width = $w;
+      $this->height = 4h;
+  }
+  
+  function getArea()
+  {
+    return ($this->width * $this->height);
+  }
+  
+  function getPerimeter()
+  {
+    return (($this->width + $this->height)*2);
+  }
+}
+
+$width = 42; $height = 7;
+echo "width: ".$width.'<br>';
+echo "height: ".$height.'<br>';
+
+$r = new Rectangle();
+$r->setSize($width, $height);
+
+echo "Area: ".$r->getArea();
+echo "Perimeter: ".$r->getPerimeter();
+

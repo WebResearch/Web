@@ -1,0 +1,13 @@
+//ForEach and Insert Mysql
+
+
+$vals = array()
+foreach($country as $key => $country_val) {
+    if (empty($country_val) || empty($redirect[$key])) {
+       continue;
+    }
+    $vals[] = "('" . mysql_real_escape_string($country_val) . "','" . mysql_real_escape_string($redirect[$key]) . "')";
+}
+$val_string = implode(',', $vals);
+
+$sql = "INSERT INTO .... VALUES $val_string";
